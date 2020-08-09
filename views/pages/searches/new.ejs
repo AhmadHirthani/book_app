@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/icons.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>My Book App</h1>
+            <h1>Search for your favourite book</h1>
+
+            <section>
+                <span class="icon-menu"></span>
+            </section>
+        </nav>
+    </header>
+    <h3 id="indexH1">Enter book's title or author's name then choose search type</h3>
+    <form action="/searches" method="POST" id="searchFormId">
+        <div id="searchDivId">
+            <input type="text" name="searchText" id="searchTextId">
+        </div>
+        <div id="radioDivId">
+            <div class="btnRadio">
+                <label for="titleRadioId">Title <input type="radio" id="titleRadioId" name="titleRadioId"
+                        value="title"></label>
+            </div>
+            <div class="btnRadio">
+                <label for="authorRadioId">Author <input type="radio" id="authorRadioId" name="searchType"
+                        value="author"></label>
+            </div>
+
+        </div>
+        <button type="submit">Search</button>
+    </form>
+</body>
+
+</html>
