@@ -25,11 +25,13 @@ app.get('/searches/new', function(request, response) {
 //     );
 // });
 
-app.get('/hello', function(request, response) {
+app.get('/', function(request, response) {
     response.status(200).render('./pages/index', {
         wellcomeMessage: 'helloWorld'
     });
 })
+
+
 
 
 app.post("/searches", (request, response) => {
