@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/base.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Best Books!</h1>
+            <section>
+                <span class="icon-menu"></span>
+            </section>
+        </nav>
+    </header>
+    <main>
+
+        <div id="containerDiv">
+            <% booksList.forEach (item => {  %>
+                <section id="bookDetails">
+
+                    <img id="bookImage" class="bookCover" src="<%= item.image_url %>" alt="">
+                    <h2 id="bookTitle" class="bookTitle">
+                        <%= item.title %>
+                    </h2>
+                    <h2 id="bookAuthor" class="bookTitle">
+                        <%= item.author %>
+                    </h2>
+
+                    <p id="bookDescription" class="desc">
+                        <%= item.description.substring(0, 80) %>
+                    </p>
+                </section>
+
+                <% }) %>
+        </div>
+
+        <!-- <div id="containerDiv">
+        <% booksList.forEach(item=>{%>
+            <div id="imageDiv">
+                <img src="" alt="" srcset="">
+                 <%=item.image_url%>
+            </div>    
+        <div id="titleDiv">
+            <%=item.title%>,
+        </div>
+        <div id="authorDiv">
+            <%=item.author%>,
+        </div>
+        <div id="descriptionDiv">
+            <%=item.description%>
+        </div> 
+             <%})%>
+    </div> -->
+    </main>
+</body>
+
+</html>

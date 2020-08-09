@@ -20,18 +20,18 @@
             </section>
         </nav>
     </header>
-    <h3 id="indexH1">Enter book's title or author's name then choose search type</h3>
+    <h3 id="H1Search">Enter book's title or author's name then choose search type</h3>
     <form action="/searches" method="POST" id="searchFormId">
         <div id="searchDivId">
             <input type="text" name="searchText" id="searchTextId">
         </div>
         <div id="radioDivId">
-            <div class="btnRadio">
-                <label for="titleRadioId">Title <input type="radio" id="titleRadioId" name="titleRadioId"
+            <div class="radioBox">
+                <label for="titleRadioId">Title <input type="radio" id="checkedRadioId" name="searchType"
                         value="title"></label>
             </div>
-            <div class="btnRadio">
-                <label for="authorRadioId">Author <input type="radio" id="authorRadioId" name="searchType"
+            <div class="radioBox">
+                <label for="authorRadioId">Author <input type="radio" id="checkedRadioId" name="searchType"
                         value="author"></label>
             </div>
 
