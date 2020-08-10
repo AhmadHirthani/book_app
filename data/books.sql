@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS
+books(
+  id SERIAL PRIMARY KEY,
+  author VARCHAR(400) NOT NULL ,
+  title VARCHAR(400) NOT NULL,
+  isbn VARCHAR(400) NOT NULL,
+  image_url VARCHAR(400) NOT NULL,
+  description TEXT NOT NULL,
+  bookshelf VARCHAR(20) NOT NULL
+);
+
