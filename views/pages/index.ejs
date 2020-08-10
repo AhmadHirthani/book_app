@@ -10,7 +10,39 @@
 <body>
     <h1>Books App</h1>
     <h2>Here, you can search for your favourite books</h2>
-    <!-- <h1> <%=wellcomeMessage%> </h1> -->
+    <div id="containerDiv">
+        Number of stored books:
+        <%=booksList.length %>
+
+            <% booksList.forEach (item => {  %>
+                <section id="bookDetails">
+
+                    <img id="bookImage" class="bookCover" src="<%= item.image_url %>" alt="">
+                    <h2 id="bookTitle" class="bookTitle">
+                        <%= item.title %>
+                    </h2>
+                    <h2 id="bookAuthor" class="bookTitle">
+                        <%= item.author %>
+                    </h2>
+
+                    <p id="bookDescription" class="desc">
+                        <%= item.description.substring(0, 80) %>
+                    </p>
+                    <div id="showDetail">
+                        <a href="books/detail?id=<%= item.id %>">
+                        view details</a>
+                    </div>
+
+                </section>
+
+                <% }) %>
+    </div>
+
+
+
+    <div id="goToSearchDiv">
+        <a href="/searches/new">Go to search page</a>
+    </div>
 
     <footer>Ahmad Alhrthani 2020</footer>
 </body>
