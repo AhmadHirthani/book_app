@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/base.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Best Books!</h1>
+            <section>
+                <span class="icon-menu"></span>
+            </section>
+        </nav>
+    </header>
+    <main>
+
+        <div id="containerDiv">
+            <section id="bookDetails">
+
+                <img id="bookImage" class="bookCover" src="<%= book.image_url %>" alt="">
+                <h2 id="bookTitle" class="bookDtails">
+                    <%= book.title %>
+                </h2>
+                <h2 id="bookAuthor" class="bookDtails">
+                    <%= book.author %>
+                </h2>
+
+                <p id="bookDescription" class="bookDtails">
+                    <%= book.description %>
+                </p>
+                <h2 id="bookIsbn" class="bookDtails"> ISBN:
+                    <%= book.isbn %>
+                </h2>
+                <h2 id="bookShelf" class="bookDtails"> Bookshelf:
+                    <%= book.bookshelf %>
+                </h2>
+            </section>
+
+
+
+        </div>
+        <div id="goToMainDiv">
+            <a href="/">Go to main</a>
+        </div>
+
+    </main>
+</body>
+
+</html>
